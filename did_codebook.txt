@@ -1,0 +1,56 @@
+--------------------------------------------------------------------------------
+Codebook for Key Analytical Variables
+--------------------------------------------------------------------------------
+
+Contents
+    - Variable Summary
+    - Variable Definitions
+    - Notes on Construction
+
+--------------------------------------------------------------------------------
+Variable Summary
+--------------------------------------------------------------------------------
+
+Dataset purpose:      Analytical variables used in Difference-in-Differences model
+Geographic level:      County-by-year panel (Florida + control states)
+Measurement period:    2007–2012
+Extent:                Florida, California, New Jersey, Oregon
+
+--------------------------------------------------------------------------------
+Variable Definitions
+--------------------------------------------------------------------------------
+
+1. Treatment Indicator
+   Variable name:      treat_i
+   Description:        Indicates whether county i is located in Florida.
+   Values:             1 = Florida county
+                       0 = County in control states
+   Use:                Identifies treated units in DID regression.
+
+2. Event-Time Variable
+   Variable name:      event_time_t
+   Definition:         event_time_t = year_t − 2010
+   Description:        Specifies time relative to policy change year.
+   Use:                Used for year fixed effects and event-time calculation.
+
+3. Outcome Variables
+
+   a. Opioid Prescriptions
+      Name:            MME per 1,000 people
+      Description:     Morphine Milligram Equivalents (MME), standardized measure 
+                       of opioid supply for prescriptions.
+
+   b. Overdose Mortality
+      Name:            Overdose deaths per 100,000 people
+      Description:     Annual drug overdose mortality rate. Reflects the most 
+                       severe health consequences of opioid misuse.
+
+--------------------------------------------------------------------------------
+Notes on Construction
+--------------------------------------------------------------------------------
+
+* The treatment indicator (treat_i) assigns treatment based on the states that the county is located in.  
+* Event-time variable centers the timeline at the policy year (2010).  
+* Outcome variables represent standardized values to ensure comparability across counties and years.
+
+--------------------------------------------------------------------------------
